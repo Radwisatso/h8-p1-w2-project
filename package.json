@@ -1,0 +1,24 @@
+{
+  "name": "postgres-ejs",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Radwisatso/h8-p1-w2-project.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "type": "commonjs",
+  "bugs": {
+    "url": "https://github.com/Radwisatso/h8-p1-w2-project/issues"
+  },
+  "homepage": "https://github.com/Radwisatso/h8-p1-w2-project#readme",
+  "dependencies": {
+    "pg": "^8.16.3"
+  }
+}
