@@ -1,0 +1,17 @@
+[
+    {
+        "title": "Ben is a student from Hacktiv8",
+        "createdAt": "2023-07-20",
+        "UserId": 1
+    },
+    {
+        "title": "Firman is from batch BSD-22",
+        "createdAt":"2023-06-20",
+        "UserId": 1
+    },
+    {
+        "title": "Razzan has a laptop",
+        "createdAt":"2023-05-20",
+        "UserId": 2
+    }
+]
