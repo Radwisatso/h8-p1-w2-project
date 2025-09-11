@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <main>
+      <h1>Update Post</h1>
+      <div>
+        <form action="/posts/update/<%= post.id %>" method="post">
+          <div>
+            <label for="">Title</label><br />
+            <input value="<%= post.title %>" name="title" type="text" />
+          </div>
+          <div>
+            <label for="">Created Date</label><br />
+            <input
+              value="<%= post.formatDate() %>"
+              name="createdAt"
+              type="date"
+            />
+            <!-- jangan lupa createdAt harus diformat yyyy-mm-dd -->
+          </div>
+          <div>
+            <label for="">Author</label><br />
+            <select name="UserId" id="">
+              <option selected disabled hidden>Please select the author</option>
+              <% authors.forEach(a => { %> <% if (post.UserId === a.id) { %>
+              <option selected value="<%= a.id %>"><%= a.name %></option>
+              <% } else { %>
+              <option value="<%= a.id %>"><%= a.name %></option>
+              <% } %> <% }) %>
+            </select>
+          </div>
+          <div>
+            <button>Submit</button>
+          </div>
+        </form>
+      </div>
+    </main>
+  </body>
+</html>

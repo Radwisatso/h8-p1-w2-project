@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <main>
+        <h1>
+            Add Post
+        </h1>
+        <div>
+            <form action="/posts/add" method="post">
+                <div>
+                    <label for="">Title</label><br>
+                    <input name="title" type="text">
+                </div>
+                <div>
+                    <label for="">Created Date</label><br>
+                    <input name="createdAt" type="date">
+                </div>
+                <div>
+                    <label for="">Author</label><br>
+                    <select name="UserId" id="">
+                        <option selected disabled hidden>Please select the author</option>
+                        <% authors.forEach(a => { %>
+                            <option value="<%= a.id %>"><%= a.name %></option>
+                        <% }) %>
+                    </select>
+                </div>
+                <div>
+                    <button>Submit</button>
+                </div>
+            </form>
+        </div>
+    </main>
+</body>
+</html>

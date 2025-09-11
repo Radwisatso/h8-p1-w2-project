@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <main>
+        <h1>Posts</h1>
+        <button>
+            <a href="/posts/add">Create Post</a>
+        </button>
+        <form method="get">
+            <input type="search" name="keyword">
+            <button>Search</button>
+        </form>
+        <div>
+            <table border="1">
+                <tr>
+                    <th>ID</th>
+                    <th>Title</th>
+                    <th>Author</th>
+                    <th>Action</th>
+                </tr>
+                <% posts.forEach(p => { %>
+                    <tr>
+                    <td><%= p.id %></td>
+                    <td><%= p.title %></td>
+                    <td><%= p.author %></td>
+                    <td>
+                        <button>
+                            <a href="/posts/update/<%= p.id %>">Edit</a>
+                        </button>
+                        <button>
+                            <a href="/posts/delete/<%= p.id %>">Delete</a>
+                        </button>
+                    </td>
+                </tr>
+                <% }) %>
+            </table>
+        </div>
+    </main>
+</body>
+</html>
