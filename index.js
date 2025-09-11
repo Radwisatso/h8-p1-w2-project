@@ -1,11 +1,10 @@
-const Controller = require("./controllers/controller")
+const express = require("express");
+const route = require("./routes");
+const app = express();
+const port = 3000;
 
-const arguments = process.argv.slice(2)
-const command = arguments[0]
+app.use(route)
 
-switch (command) {
-    case 'showUsers': {
-        Controller.showUsers()
-        break
-    }
-}
+app.listen(port, () => {
+  console.log(`Listening on port ${port}`);
+});

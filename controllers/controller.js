@@ -1,13 +1,12 @@
 const Model = require("../models/model");
-const View = require("../views/view");
 
 class Controller {
-  static async showUsers() {
+  static async showUsers(req, res) {
     try {
-      const users = await Model.showUsers();
-      View.showUsers(users)
+      const users = await Model.showUsers()
+      res.send(users)
     } catch (error) {
-      View.printError(error)
+      res.send(error)      
     }
   }
 }
